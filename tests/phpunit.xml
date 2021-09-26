@@ -6,7 +6,9 @@
             <directory>SleeperApi</directory>
         </testsuite>
     </testsuites>
-    <report>
-        <clover outputFile="../build/logs/clover.xml"/>
-    </report>
+    <coverage>
+      <report>
+          <clover outputFile="../build/logs/clover.xml"/>
+      </report>
+    </coverage>
 </phpunit>
