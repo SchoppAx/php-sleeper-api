@@ -6,7 +6,7 @@
             <directory>SleeperApi</directory>
         </testsuite>
     </testsuites>
-    <logging>
-        <testdoxXml outputFile="./build/logs/clover.xml"/>
-    </logging>
+    <report>
+        <clover outputFile="../build/logs/clover.xml"/>
+    </report>
 </phpunit>
