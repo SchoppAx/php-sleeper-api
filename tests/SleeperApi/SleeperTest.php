@@ -18,7 +18,7 @@ class SleeperTest extends TestCase
 
     $client = new Sleeper($mock);
 
-    $league = (object) $client->leagues()->find('442097181638258688');
+    $league = (object) $client->leagues()->find('289646328504385536');
 
     $this->assertIsObject($league);
     $this->assertEquals('289646328504385536', $league->league_id);

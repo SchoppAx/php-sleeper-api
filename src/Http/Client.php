@@ -7,7 +7,7 @@ use GuzzleHttp\HandlerStack;
 
 class Client extends \GuzzleHttp\Client
 {
-  private const API_BASE = "https://api.sleeper.app/v1";
+  private const API_BASE = "https://api.sleeper.app/v1/";
 
   public function __construct(MockHandler $mock = NULL)
   {
