@@ -1,0 +1,193 @@
+[{
+  "waiver_budget": [],
+  "type": "waiver",
+  "transaction_id": "236033779569782784",
+  "status_updated": 1510733041378,
+  "status": "failed",
+  "settings": null,
+  "roster_ids": [1],
+  "metadata": {
+    "notes": "Unfortunately, your roster will have too many players after this transaction."
+  },
+  "leg": 10,
+  "drops": {
+    "2222": 1
+  },
+  "draft_picks": [],
+  "creator": "188815879448829952",
+  "created": 1510637347645,
+  "consenter_ids": [1],
+  "adds": {
+    "788": 1
+  }
+}, {
+  "waiver_budget": [],
+  "type": "waiver",
+  "transaction_id": "236033570462756864",
+  "status_updated": 1510733041378,
+  "status": "complete",
+  "settings": null,
+  "roster_ids": [1],
+  "metadata": {
+    "notes": "Your waiver claim was processed successfully!"
+  },
+  "leg": 10,
+  "drops": {
+    "2222": 1
+  },
+  "draft_picks": [],
+  "creator": "188815879448829952",
+  "created": 1510637297790,
+  "consenter_ids": [1],
+  "adds": {
+    "4149": 1
+  }
+}, {
+  "waiver_budget": [],
+  "type": "free_agent",
+  "transaction_id": "235489811849277440",
+  "status_updated": 1510507655634,
+  "status": "complete",
+  "settings": null,
+  "roster_ids": [3],
+  "metadata": null,
+  "leg": 10,
+  "drops": {
+    "1984": 3
+  },
+  "draft_picks": [],
+  "creator": "205597675557494784",
+  "created": 1510507655634,
+  "consenter_ids": [3],
+  "adds": {
+    "200": 3
+  }
+}, {
+  "waiver_budget": [],
+  "type": "free_agent",
+  "transaction_id": "234155315946319872",
+  "status_updated": 1510189487017,
+  "status": "complete",
+  "settings": null,
+  "roster_ids": [2],
+  "metadata": null,
+  "leg": 10,
+  "drops": {
+    "208": 2
+  },
+  "draft_picks": [],
+  "creator": "83207403252105216",
+  "created": 1510189487017,
+  "consenter_ids": [2],
+  "adds": {
+    "801": 2
+  }
+}, {
+  "waiver_budget": [],
+  "type": "free_agent",
+  "transaction_id": "234154875586342912",
+  "status_updated": 1510189382027,
+  "status": "complete",
+  "settings": null,
+  "roster_ids": [2],
+  "metadata": null,
+  "leg": 10,
+  "drops": {
+    "268": 2
+  },
+  "draft_picks": [],
+  "creator": "83207403252105216",
+  "created": 1510189382027,
+  "consenter_ids": [2],
+  "adds": {
+    "208": 2
+  }
+}, {
+  "waiver_budget": [],
+  "type": "waiver",
+  "transaction_id": "233717996965588992",
+  "status_updated": 1510128241195,
+  "status": "complete",
+  "settings": null,
+  "roster_ids": [6],
+  "metadata": {
+    "notes": "Your waiver claim was processed successfully!"
+  },
+  "leg": 10,
+  "drops": {
+    "3157": 6
+  },
+  "draft_picks": [],
+  "creator": "80181968138289152",
+  "created": 1510085222047,
+  "consenter_ids": [6],
+  "adds": {
+    "1352": 6
+  }
+}, {
+  "waiver_budget": [],
+  "type": "waiver",
+  "transaction_id": "233620495008788480",
+  "status_updated": 1510128241195,
+  "status": "complete",
+  "settings": null,
+  "roster_ids": [1],
+  "metadata": {
+    "notes": "Your waiver claim was processed successfully!"
+  },
+  "leg": 10,
+  "drops": {
+    "269": 1
+  },
+  "draft_picks": [],
+  "creator": "188815879448829952",
+  "created": 1510061975769,
+  "consenter_ids": [1],
+  "adds": {
+    "4039": 1
+  }
+}, {
+  "waiver_budget": [],
+  "type": "waiver",
+  "transaction_id": "233620419704262656",
+  "status_updated": 1510128241195,
+  "status": "failed",
+  "settings": null,
+  "roster_ids": [1],
+  "metadata": {
+    "notes": "Unfortunately, your roster will have too many players after this transaction."
+  },
+  "leg": 10,
+  "drops": {
+    "BUF": 1
+  },
+  "draft_picks": [],
+  "creator": "188815879448829952",
+  "created": 1510061957816,
+  "consenter_ids": [1],
+  "adds": {
+    "NE": 1
+  }
+}, {
+  "waiver_budget": [],
+  "type": "waiver",
+  "transaction_id": "233620375005556736",
+  "status_updated": 1510128241195,
+  "status": "complete",
+  "settings": null,
+  "roster_ids": [1],
+  "metadata": {
+    "notes": "Your waiver claim was processed successfully!"
+  },
+  "leg": 10,
+  "drops": {
+    "BUF": 1
+  },
+  "draft_picks": [],
+  "creator": "188815879448829952",
+  "created": 1510061947158,
+  "consenter_ids": [1],
+  "adds": {
+    "DET": 1
+  }
+}]

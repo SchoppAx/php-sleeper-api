@@ -1,0 +1,25 @@
+[{
+  "season": "2018",
+  "round": 6,
+  "roster_id": 2,
+  "previous_owner_id": 2,
+  "owner_id": 3
+}, {
+  "season": "2018",
+  "round": 7,
+  "roster_id": 2,
+  "previous_owner_id": 2,
+  "owner_id": 3
+}, {
+  "season": "2018",
+  "round": 6,
+  "roster_id": 3,
+  "previous_owner_id": 3,
+  "owner_id": 2
+}, {
+  "season": "2018",
+  "round": 7,
+  "roster_id": 3,
+  "previous_owner_id": 3,
+  "owner_id": 2
+}]

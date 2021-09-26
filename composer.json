@@ -1,0 +1,24 @@
+{
+    "name": "schoppax/sleeper-php",
+    "description": "Sleeper API PHP library for consuming fantasy content",
+    "type": "library",
+    "require": {
+        "php": "^7.4|^8.0",
+        "guzzlehttp/guzzle": "^7.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "SchoppAx\\Sleeper\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Axel Schoppe",
+            "email": "develop4all@gmail.com"
+        }
+    ]
+}
