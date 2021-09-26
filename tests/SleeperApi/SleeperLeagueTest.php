@@ -5,8 +5,6 @@ use SchoppAx\Sleeper\Sleeper;
 use GuzzleHttp\Handler\MockHandler;
 use GuzzleHttp\Psr7\Response;
 use GuzzleHttp\Psr7\Request;
-use GuzzleHttp\Exception\RequestException;
-use GuzzleHttp\Exception\ClientException;
 
 class SleeperTest extends TestCase
 {
