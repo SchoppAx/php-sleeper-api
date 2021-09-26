@@ -1,5 +1,5 @@
 {
-    "name": "schoppax/sleeper-php",
+    "name": "schoppax/sleeper-api-php-lib",
     "description": "Sleeper API PHP library for consuming fantasy content",
     "type": "library",
     "require": {
