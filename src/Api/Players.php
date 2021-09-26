@@ -6,7 +6,8 @@ class Players extends Api
 {
   /**
    * @return array|[]
-   * @throws SleeperException
+   * @throws ClientException if status code <> 200
+   * @throws Exception if response body equals null
    */
   public function all(): array
   {

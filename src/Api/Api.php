@@ -17,16 +17,16 @@ abstract class Api implements ApiInterface
     /**
      * @param string $path
      * @return json of called api resource
-     * @throws SleeperException
+     * @throws Exception
      */
     public function get(string $path)
     {
       $response = $this->client->request('GET', $path);
 
       if ($response->getStatusCode() !== 200) {
-        throw new SleeperHttpException($response->getStatusCode());
+        throw new Exception('Statuscode <> 200', $response->getStatusCode());
       } elseif ($response->getBody() === 'null') {
-        throw new NullPointerException('The $var does not exist');
+        throw new Exception('The response body does not exist');
       }
 
       return json_decode($response->getBody(), true);

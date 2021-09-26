@@ -10,7 +10,8 @@ class Drafts extends Api
    * @param string $season
    * @param string[optional] $sport default is nfl
    * @return array|[]
-   * @throws SleeperException
+   * @throws ClientException if status code <> 200
+   * @throws Exception if response body equals null
    */
   public function byUser(string $userId, string $season, string $sport = 'nfl'): array
   {
@@ -20,7 +21,8 @@ class Drafts extends Api
   /**
    * @param string $leagueId
    * @return array|[]
-   * @throws SleeperException
+   * @throws ClientException if status code <> 200
+   * @throws Exception if response body equals null
    */
   public function byLeague(string $leagueId): array
   {
@@ -30,7 +32,8 @@ class Drafts extends Api
   /**
    * @param string $draftId
    * @return array|[]
-   * @throws SleeperException
+   * @throws ClientException if status code <> 200
+   * @throws Exception if response body equals null
    */
   public function find(string $draftId): array
   {
@@ -40,7 +43,8 @@ class Drafts extends Api
   /**
    * @param string $draftId
    * @return array|[]
-   * @throws SleeperException
+   * @throws ClientException if status code <> 200
+   * @throws Exception if response body equals null
    */
   public function picks(string $draftId): array
   {
@@ -50,7 +54,8 @@ class Drafts extends Api
   /**
    * @param string $draftId
    * @return array|[]
-   * @throws SleeperException
+   * @throws ClientException if status code <> 200
+   * @throws Exception if response body equals null
    */
   public function tradedPicks(string $draftId): array
   {

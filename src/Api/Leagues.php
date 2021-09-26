@@ -8,7 +8,8 @@ class Leagues extends Api
   /**
    * @param string $leagueId
    * @return array|[]
-   * @throws SleeperException
+   * @throws ClientException if status code <> 200
+   * @throws Exception if response body equals null
    */
   public function find(string $leagueId): array
   {
@@ -20,7 +21,8 @@ class Leagues extends Api
    * @param string $season
    * @param string[optional] $sport default is nfl
    * @return array|[]
-   * @throws SleeperException
+   * @throws ClientException if status code <> 200
+   * @throws Exception if response body equals null
    */
   public function byUser(string $userId, string $season, string $sport = 'nfl'): array
   {
@@ -32,7 +34,8 @@ class Leagues extends Api
    * @param string $leagueId
    * @param string $week
    * @return array|[]
-   * @throws SleeperException
+   * @throws ClientException if status code <> 200
+   * @throws Exception if response body equals null
    */
   public function matchups(string $userId, string $week): array
   {
@@ -42,7 +45,8 @@ class Leagues extends Api
   /**
    * @param string[optional] $sport default is nfl
    * @return object
-   * @throws SleeperException
+   * @throws ClientException if status code <> 200
+   * @throws Exception if response body equals null
    */
   public function state(string $sport = 'nfl'): array
   {
@@ -52,7 +56,8 @@ class Leagues extends Api
   /**
    * @param string $leagueId
    * @return array|[]
-   * @throws SleeperException
+   * @throws ClientException if status code <> 200
+   * @throws Exception if response body equals null
    */
   public function users(string $leagueId): array
   {
@@ -62,7 +67,8 @@ class Leagues extends Api
   /**
    * @param string $leagueId
    * @return array|[]
-   * @throws SleeperException
+   * @throws ClientException if status code <> 200
+   * @throws Exception if response body equals null
    */
   public function rosters(string $leagueId): array
   {
