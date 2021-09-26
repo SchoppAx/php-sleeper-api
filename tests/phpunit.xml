@@ -18,7 +18,7 @@
         </testsuite>
     </testsuites>
 
-    <coverage cacheDirectory="../build/logs"
+    <coverage cacheDirectory=".phpunit.cache/code-coverage"
               processUncoveredFiles="true">
         <include>
             <directory suffix=".php">src</directory>
