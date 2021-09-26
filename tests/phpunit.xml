@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <phpunit colors="true" bootstrap="../vendor/autoload.php">
-    <testsuites>
-        <testsuite name="app">
-            <directory>SleeperApi</directory>
-        </testsuite>
-    </testsuites>
-    <coverage>
-      <report>
-          <clover outputFile="../build/logs/clover.xml"/>
-      </report>
-    </coverage>
+  <testsuites>
+    <testsuite name="app">
+        <directory>SleeperApi</directory>
+    </testsuite>
+  </testsuites>
+  <coverage>
+    <include>
+      <directory suffix=".php">src</directory>
+    </include>
+    <report>
+      <clover outputFile="../build/logs/clover.xml"/>
+    </report>
+  </coverage>
 </phpunit>
