@@ -82,4 +82,42 @@ class SleeperLeagueTest extends TestCase
     $this->assertEquals('2KSports', $user->display_name);
   }
 
+  public function testMatchup()
+  {
+    $data = file_get_contents(__DIR__ . '/data/matchups.json');
+    $response = new GuzzleHttp\Psr7\Response(200, [], $data);
+    $mock = new GuzzleHttp\Handler\MockHandler([ $response, $response ]);
+
+    $client = new SleeperClient($mock);
+
+    $matchups = $client->leagues()->matchups('337383787396628480', '3');
+    $matchup = (object) $matchups[0];
+
+    $this->assertIsArray($matchups);
+    $this->assertCount(12, $matchups);
+    $this->assertEquals(108.9, $matchup->points);
+    $this->assertIsArray($matchup->starters);
+    $this->assertIsArray($matchup->players);
+  }
+
+  public function testRoster()
+  {
+    $data = file_get_contents(__DIR__ . '/data/rosters.json');
+    $response = new GuzzleHttp\Psr7\Response(200, [], $data);
+    $mock = new GuzzleHttp\Handler\MockHandler([ $response, $response ]);
+
+    $client = new SleeperClient($mock);
+
+    $rosters = $client->leagues()->rosters('337383787396628480');
+    $roster = (object) $rosters[0];
+
+    $this->assertIsArray($rosters);
+    $this->assertCount(12, $rosters);
+    $this->assertEquals('189140835533586432', $roster->owner_id);
+    $this->assertEquals('289646328504385536', $roster->league_id);
+    $this->assertIsArray($roster->settings);
+    $this->assertEquals(7, $roster->settings['wins']);
+    $this->assertEquals(6, $roster->settings['losses']);
+  }
+
 }
