@@ -1,12 +1,12 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use SchoppAx\Sleeper\Sleeper;
+use SchoppAx\Sleeper\SleeperClient;
 use GuzzleHttp\Handler\MockHandler;
 use GuzzleHttp\Psr7\Response;
 use GuzzleHttp\Psr7\Request;
 
-class SleeperTest extends TestCase
+class SleeperLeagueTest extends TestCase
 {
 
   public function testLeague()
@@ -15,7 +15,7 @@ class SleeperTest extends TestCase
     $response = new GuzzleHttp\Psr7\Response(200, [], $data);
     $mock = new GuzzleHttp\Handler\MockHandler([ $response, $response ]);
 
-    $client = new Sleeper($mock);
+    $client = new SleeperClient($mock);
 
     $league = (object) $client->leagues()->find('289646328504385536');
 
@@ -33,7 +33,7 @@ class SleeperTest extends TestCase
     $response = new GuzzleHttp\Psr7\Response(200, [], $data);
     $mock = new GuzzleHttp\Handler\MockHandler([ $response, $response ]);
 
-    $client = new Sleeper($mock);
+    $client = new SleeperClient($mock);
 
     $leagues = $client->leagues()->byUser('457511950237696', '2018');
     $league = (object) $leagues[0];
@@ -53,7 +53,7 @@ class SleeperTest extends TestCase
     $response = new GuzzleHttp\Psr7\Response(200, [], $data);
     $mock = new GuzzleHttp\Handler\MockHandler([ $response, $response ]);
 
-    $client = new Sleeper($mock);
+    $client = new SleeperClient($mock);
 
     $state = (object) $client->leagues()->state();
 
@@ -62,6 +62,24 @@ class SleeperTest extends TestCase
     $this->assertEquals('2021-09-09', $state->season_start_date);
     $this->assertEquals('2020', $state->previous_season);
     $this->assertEquals('2021', $state->season);
+  }
+
+  public function testUsers()
+  {
+    $data = file_get_contents(__DIR__ . '/data/users.json');
+    $response = new GuzzleHttp\Psr7\Response(200, [], $data);
+    $mock = new GuzzleHttp\Handler\MockHandler([ $response, $response ]);
+
+    $client = new SleeperClient($mock);
+
+    $users = $client->leagues()->users('289646328504385536');
+    $user = (object) $users[0];
+
+    $this->assertIsArray($users);
+    $this->assertCount(14, $users);
+    $this->assertEquals('457511950237696', $user->user_id);
+    $this->assertTrue($user->is_owner);
+    $this->assertEquals('2KSports', $user->display_name);
   }
 
 }
