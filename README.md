@@ -8,7 +8,7 @@ Sleeper API PHP library for consuming fantasy content from [official read-only S
 [![Coverage Status](https://coveralls.io/repos/github/SchoppAx/sleeper-api-php-lib/badge.svg?branch=master)](https://coveralls.io/github/SchoppAx/sleeper-api-php-lib?branch=master)
 [![Latest Stable Version](https://poser.pugx.org/schoppax/sleeper-api-php-lib/v/stable)](https://packagist.org/packages/schoppax/sleeper-api-php-lib)
 [![Total Downloads](https://poser.pugx.org/schoppax/sleeper-api-php-lib/downloads)](https://packagist.org/packages/schoppax/sleeper-api-php-lib)
-[![PHP from Packagist](https://img.shields.io/packagist/php-v/schoppax/sleeper-api-php-lib.svg)](https://packagist.org/packages/schoppax/sleeper-api-php-lib)
+[![PHP from Packagist](https://poser.pugx.org/schoppax/sleeper-api-php-lib/require/php)](https://packagist.org/packages/schoppax/sleeper-api-php-lib)
 [![License](https://poser.pugx.org/schoppax/sleeper-api-php-lib/license.png)](https://packagist.org/packages/schoppax/sleeper-api-php-lib)
 
 

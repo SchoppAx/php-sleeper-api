@@ -37,7 +37,7 @@ class Leagues extends Api
    * @throws ClientException if status code <> 200
    * @throws Exception if response body equals null
    */
-  public function matchups(string $userId, string $week): array
+  public function matchups(string $leagueId, string $week): array
   {
     return $this->get('league/' . $leagueId . '/matchups/' . $week);
   }
