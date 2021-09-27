@@ -30,7 +30,6 @@ or add to your composer.json file:
 
 ``` php
 
-use GuzzleHttp\Exception\ClientException;
 use SchoppAx\Sleeper\SleeperClient;
 
 $client = new SleeperClient();
@@ -38,8 +37,6 @@ $client = new SleeperClient();
 try {
   $league = (object) $client->leagues()->find('289646328504385536');
 } catch(BadMethodCallException $be) {
-
-} catch(ClientException $ce) {
 
 } catch(Exception $e) {
 
