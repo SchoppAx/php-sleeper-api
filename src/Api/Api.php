@@ -24,9 +24,9 @@ abstract class Api implements ApiInterface
       $response = $this->client->request('GET', $path);
 
       if ($response->getStatusCode() !== 200) {
-        throw new Exception('Statuscode <> 200', $response->getStatusCode());
+        throw new \Exception('Statuscode <> 200', $response->getStatusCode());
       } elseif ($response->getBody() === 'null') {
-        throw new Exception('The response body does not exist');
+        throw new \Exception('The response body does not exist');
       }
 
       return json_decode($response->getBody(), true);
