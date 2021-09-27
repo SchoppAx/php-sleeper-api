@@ -14,14 +14,14 @@ class SleeperAvatarTest extends TestCase
     $mock = $this->createMock(Avatars::class);
     $mock->expects($this->once())
       ->method('find')
-      ->willReturnCallback(function($id) use ($value) {
+      ->willReturnCallback(function() use ($value) {
         return $value;
       });
 
     $client = $this->createPartialMock(SleeperClient::class, ['__call']);
     $client->expects($this->once())
       ->method('__call')
-      ->willReturnCallback(function($name, $args) use ($mock) {
+      ->willReturnCallback(function() use ($mock) {
         return $mock;
       });
 
