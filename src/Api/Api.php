@@ -6,7 +6,7 @@ use SchoppAx\Sleeper\Http\Client;
 
 abstract class Api implements ApiInterface
 {
-    private Client $client;
+    private $client;
 
     public function __construct(Client $client)
     {

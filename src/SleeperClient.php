@@ -4,9 +4,8 @@ namespace SchoppAx\Sleeper;
 
 use SchoppAx\Sleeper\Http\Client;
 
-class SleeperClient
-{
-  private Client $client;
+class SleeperClient {
+  private $client;
 
   public function __construct($mock = NULL)
   {
