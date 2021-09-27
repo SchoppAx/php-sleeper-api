@@ -16,7 +16,6 @@ class SleeperClient
   /**
    * @param string $method
    * @param string $parameters
-   * @return class
    *
    * @method class Avatars() retrieves avatar images for users and leagues
    * @method class Drafts() retrieves all drafts by a user or league
