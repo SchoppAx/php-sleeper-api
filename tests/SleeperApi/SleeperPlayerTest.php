@@ -9,7 +9,7 @@ use GuzzleHttp\Psr7\Request;
 class SleeperPlayerTest extends TestCase
 {
 
-  public function testUser()
+  public function testPlayers()
   {
     $data = file_get_contents(__DIR__ . '/data/players.json');
     $response = new GuzzleHttp\Psr7\Response(200, [], $data);
@@ -34,6 +34,42 @@ class SleeperPlayerTest extends TestCase
     $this->assertEquals('NO', $mThomas->team);
     $this->assertEquals('WR', $mThomas->position);
     $this->assertEquals('3199', $mThomas->player_id);
+  }
+
+  public function testTrendingAdds()
+  {
+    $data = file_get_contents(__DIR__ . '/data/trending-add.json');
+    $response = new GuzzleHttp\Psr7\Response(200, [], $data);
+    $mock = new GuzzleHttp\Handler\MockHandler([ $response, $response ]);
+
+    $client = new SleeperClient($mock);
+
+    $players = $client->players()->trending('add');
+    $player = (object) $players['6'];
+
+    $this->assertIsArray($players);
+    $this->assertCount(25, $players);
+    $this->assertIsObject($player);
+    $this->assertEquals('1110', $player->player_id);
+    $this->assertEquals(53134, $player->count);
+  }
+
+  public function testTrendingDrops()
+  {
+    $data = file_get_contents(__DIR__ . '/data/trending-drop.json');
+    $response = new GuzzleHttp\Psr7\Response(200, [], $data);
+    $mock = new GuzzleHttp\Handler\MockHandler([ $response, $response ]);
+
+    $client = new SleeperClient($mock);
+
+    $players = $client->players()->trending('add');
+    $player = (object) $players['24'];
+
+    $this->assertIsArray($players);
+    $this->assertCount(25, $players);
+    $this->assertIsObject($player);
+    $this->assertEquals('367', $player->player_id);
+    $this->assertEquals(15676, $player->count);
   }
 
 }

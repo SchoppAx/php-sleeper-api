@@ -7,7 +7,7 @@ class Users extends Api
 
   /**
    * @param string $identifier username or user_id
-   * @return array|[]
+   * @return array
    * @throws ClientException if status code <> 200
    * @throws Exception if response body equals null
    */
