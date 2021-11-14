@@ -7,11 +7,11 @@ class Leagues extends Api
 
   /**
    * @param string $leagueId
-   * @return array|[]
+   * @return mixed object|resource|array|string|int|float|bool|null
    * @throws ClientException if status code <> 200
    * @throws Exception if response body equals null
    */
-  public function find(string $leagueId): array
+  public function find(string $leagueId): mixed
   {
     return $this->get('league/' . $leagueId);
   }
@@ -20,11 +20,11 @@ class Leagues extends Api
    * @param string $userId
    * @param string $season
    * @param string[optional] $sport default is nfl
-   * @return array|[]
+   * @return mixed object|resource|array|string|int|float|bool|null
    * @throws ClientException if status code <> 200
    * @throws Exception if response body equals null
    */
-  public function byUser(string $userId, string $season, string $sport = 'nfl'): array
+  public function byUser(string $userId, string $season, string $sport = 'nfl'): mixed
   {
     return $this->get('user/' . $userId . '/leagues/'. $sport .'/' . $season);
   }
@@ -33,66 +33,66 @@ class Leagues extends Api
   /**
    * @param string $leagueId
    * @param string $week
-   * @return array|[]
+   * @return mixed object|resource|array|string|int|float|bool|null
    * @throws ClientException if status code <> 200
    * @throws Exception if response body equals null
    */
-  public function matchups(string $leagueId, string $week): array
+  public function matchups(string $leagueId, string $week): mixed
   {
     return $this->get('league/' . $leagueId . '/matchups/' . $week);
   }
 
   /**
    * @param string[optional] $sport default is nfl
-   * @return object
+   * @return mixed object|resource|array|string|int|float|bool|null
    * @throws ClientException if status code <> 200
    * @throws Exception if response body equals null
    */
-  public function state(string $sport = 'nfl'): array
+  public function state(string $sport = 'nfl'): mixed
   {
     return $this->get('state/'. $sport);
   }
 
   /**
    * @param string $leagueId
-   * @return array|[]
+   * @return mixed object|resource|array|string|int|float|bool|null
    * @throws ClientException if status code <> 200
    * @throws Exception if response body equals null
    */
-  public function users(string $leagueId): array
+  public function users(string $leagueId): mixed
   {
     return $this->get('league/' . $leagueId . '/users');
   }
 
   /**
    * @param string $leagueId
-   * @return array|[]
+   * @return mixed object|resource|array|string|int|float|bool|null
    * @throws ClientException if status code <> 200
    * @throws Exception if response body equals null
    */
-  public function rosters(string $leagueId): array
+  public function rosters(string $leagueId): mixed
   {
     return $this->get('league/' . $leagueId . '/rosters');
   }
 
   /**
    * @param string $leagueId
-   * @return array|[]
+   * @return mixed object|resource|array|string|int|float|bool|null
    * @throws ClientException if status code <> 200
    * @throws Exception if response body equals null
    */
-  public function winnersBracket(string $leagueId): array
+  public function winnersBracket(string $leagueId): mixed
   {
     return $this->get('league/' . $leagueId . '/winners_bracket');
   }
 
   /**
    * @param string $leagueId
-   * @return array|[]
+   * @return mixed object|resource|array|string|int|float|bool|null
    * @throws ClientException if status code <> 200
    * @throws Exception if response body equals null
    */
-  public function losersBracket(string $leagueId): array
+  public function losersBracket(string $leagueId): mixed
   {
     return $this->get('league/' . $leagueId . '/losers_bracket');
   }

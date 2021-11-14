@@ -16,7 +16,7 @@ abstract class Api implements ApiInterface
 
     /**
      * @param string $path
-     * @return json of called api resource
+     * @return mixed (json) of called api resource
      * @throws Exception
      */
     public function get(string $path)
