@@ -75,4 +75,26 @@ class Leagues extends Api
     return $this->get('league/' . $leagueId . '/rosters');
   }
 
+  /**
+   * @param string $leagueId
+   * @return array|[]
+   * @throws ClientException if status code <> 200
+   * @throws Exception if response body equals null
+   */
+  public function winnersBracket(string $leagueId): array
+  {
+    return $this->get('league/' . $leagueId . '/winners_bracket');
+  }
+
+  /**
+   * @param string $leagueId
+   * @return array|[]
+   * @throws ClientException if status code <> 200
+   * @throws Exception if response body equals null
+   */
+  public function losersBracket(string $leagueId): array
+  {
+    return $this->get('league/' . $leagueId . '/losers_bracket');
+  }
+
 }

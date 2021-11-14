@@ -120,4 +120,46 @@ class SleeperLeagueTest extends TestCase
     $this->assertEquals(6, $roster->settings['losses']);
   }
 
+  public function testLosersBracket()
+  {
+    $data = file_get_contents(__DIR__ . '/data/playoff-bracket-loser.json');
+    $response = new GuzzleHttp\Psr7\Response(200, [], $data);
+    $mock = new GuzzleHttp\Handler\MockHandler([ $response, $response ]);
+
+    $client = new SleeperClient($mock);
+
+    $bracket = $client->leagues()->losersBracket('289646328504385536');
+    $firstMatchup = (object) $bracket[0];
+    $secondMatchup = (object) $bracket[2];
+
+    $this->assertIsArray($bracket);
+    $this->assertCount(7, $bracket);
+    $this->assertEquals(7, $firstMatchup->w);
+    $this->assertEquals(1, $firstMatchup->r);
+    $this->assertEquals(1, $secondMatchup->t2_from['w']);
+    $this->assertEquals(7, $secondMatchup->l);
+    $this->assertEquals(11, $secondMatchup->w);
+  }
+
+  public function testWinnersBracket()
+  {
+    $data = file_get_contents(__DIR__ . '/data/playoff-bracket-winner.json');
+    $response = new GuzzleHttp\Psr7\Response(200, [], $data);
+    $mock = new GuzzleHttp\Handler\MockHandler([ $response, $response ]);
+
+    $client = new SleeperClient($mock);
+
+    $bracket = $client->leagues()->winnersBracket('289646328504385536');
+    $firstMatchup = (object) $bracket[0];
+    $secondMatchup = (object) $bracket[3];
+
+    $this->assertIsArray($bracket);
+    $this->assertCount(7, $bracket);
+    $this->assertEquals(1, $firstMatchup->w);
+    $this->assertEquals(5, $firstMatchup->t1);
+    $this->assertEquals(2, $secondMatchup->t2_from['w']);
+    $this->assertEquals(2, $secondMatchup->l);
+    $this->assertEquals(3, $secondMatchup->w);
+  }
+
 }
