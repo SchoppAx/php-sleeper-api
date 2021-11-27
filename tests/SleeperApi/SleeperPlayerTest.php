@@ -72,4 +72,17 @@ class SleeperPlayerTest extends TestCase
     $this->assertEquals(15676, $player->count);
   }
 
+  public function testTrendingException()
+  {
+    $response = new GuzzleHttp\Psr7\Response(200, [], null);
+    $mock = new GuzzleHttp\Handler\MockHandler([ $response, $response ]);
+
+    $client = new SleeperClient($mock);
+
+    $this->expectException(InvalidArgumentException::class);
+    $this->expectExceptionMessage('trending function only accepts type "add" or "drop". Input was: none');
+
+    $players = $client->players()->trending('none');
+  }
+
 }
