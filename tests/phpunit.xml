@@ -29,15 +29,13 @@
         </testsuite>
     </testsuites>
 
-    <filter>
-        <blacklist>
-            <directory>../../.github</directory>
-            <directory>../../tests</directory>
-            <directory>../../vendor</directory>
-        </blacklist>
-    </filter>
-    
-    <logging>
-        <log type="coverage-clover" target="../build/logs/clover.xml"/>
-    </logging>
+    <coverage cacheDirectory="../build/logs"
+              processUncoveredFiles="true">
+      <include>
+        <directory suffix=".php">../src</directory>
+      </include>
+      <report>
+        <clover outputFile="clover.xml"/>
+      </report>
+    </coverage>
 </phpunit>
