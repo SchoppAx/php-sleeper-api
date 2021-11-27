@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <phpunit
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:noNamespaceSchemaLocation="vendor/phpunit/phpunit/phpunit.xsd"
+    xsi:noNamespaceSchemaLocation="../vendor/phpunit/phpunit/phpunit.xsd"
     backupGlobals="false"
     backupStaticAttributes="false"
     beStrictAboutChangesToGlobalState="true"
     beStrictAboutOutputDuringTests="true"
     beStrictAboutTestsThatDoNotTestAnything="true"
-    bootstrap="vendor/autoload.php"
+    bootstrap="../vendor/autoload.php"
     colors="true"
     columns="max"
     convertErrorsToExceptions="true"
@@ -24,23 +24,20 @@
     </php>
 
     <testsuites>
-        <testsuite name="PHP Coveralls component test suite">
-            <directory>./tests/</directory>
+        <testsuite name="app">
+            <directory>SleeperApi</directory>
         </testsuite>
     </testsuites>
 
     <filter>
-        <whitelist>
-            <directory>./src</directory>
-            <exclude>
-                <directory>./composer</directory>
-                <directory>./tests</directory>
-                <directory>./vendor</directory>
-            </exclude>
-        </whitelist>
+        <blacklist>
+            <directory>../../.github</directory>
+            <directory>../../tests</directory>
+            <directory>../../vendor</directory>
+        </blacklist>
     </filter>
-
+    
     <logging>
-        <log type="coverage-clover" target="build/logs/clover.xml"/>
+        <log type="coverage-clover" target="../build/logs/clover.xml"/>
     </logging>
 </phpunit>
