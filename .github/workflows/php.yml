@@ -39,7 +39,7 @@ jobs:
       run: composer install --prefer-dist --no-progress
 
     - name: Run test suite
-      run: ./vendor/bin/phpunit -v tests
+      run: ./vendor/bin/phpunit tests -c tests/phpunit.xml -v
 
     - name: Upload coverage results to Coveralls
       env:
