@@ -16,11 +16,11 @@ class SleeperClient {
    * @param string $method
    * @param string $parameters
    *
-   * @method class Avatars() retrieves avatar images for users and leagues
-   * @method class Drafts() retrieves all drafts by a user or league
+   * @method class avatars() retrieves avatar images for users and leagues
+   * @method class drafts() retrieves all drafts by a user or league
    * @method class leagues() retrieves all leagues
-   * @method class Players() retrieves all players
-   * @method class Users() retrieve user object by name or id
+   * @method class players() retrieves all players
+   * @method class users() retrieve user object by name or id
    *
    * @throws BadMethodCallException
    */
