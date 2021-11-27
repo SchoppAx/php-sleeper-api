@@ -42,4 +42,15 @@ class SleeperAvatarTest extends TestCase
     $this->assertEquals($exists, true);
   }
 
+  public function testThumbnailAvatar()
+  {
+    $client = new SleeperClient();
+
+    $url = $client->avatars()->find('79f5f8ecdd59fe94b668993366552b3a', true);
+    $exists = $this->remoteFileExists($url);
+
+    $this->assertIsBool($exists);
+    $this->assertEquals($exists, true);
+  }
+
 }
