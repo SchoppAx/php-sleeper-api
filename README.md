@@ -1,14 +1,14 @@
-sleeper-api-php-lib
+php-sleeper-api
 ===================
 
-[![Build Status](https://www.travis-ci.org/SchoppAx/sleeper-api-php-lib.svg?branch=master)](https://www.travis-ci.org/SchoppAx/sleeper-api-php-lib)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/SchoppAx/sleeper-api-php-lib/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/SchoppAx/sleeper-api-php-lib/?branch=master)
-[![Coverage Status](https://coveralls.io/repos/github/SchoppAx/sleeper-api-php-lib/badge.svg?branch=master)](https://coveralls.io/github/SchoppAx/sleeper-api-php-lib?branch=master)
+[![Build Status](https://www.travis-ci.org/SchoppAx/php-sleeper-api.svg?branch=master)](https://www.travis-ci.org/SchoppAx/php-sleeper-api)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/SchoppAx/php-sleeper-api/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/SchoppAx/php-sleeper-api/?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/SchoppAx/php-sleeper-api/badge.svg?branch=master)](https://coveralls.io/github/SchoppAx/php-sleeper-api?branch=master)
 
-[![PHP from Packagist](https://poser.pugx.org/schoppax/sleeper-api-php-lib/require/php)](https://packagist.org/packages/schoppax/sleeper-api-php-lib)
-[![Latest Stable Version](https://poser.pugx.org/schoppax/sleeper-api-php-lib/v/stable)](https://packagist.org/packages/schoppax/sleeper-api-php-lib)
-[![Total Downloads](https://poser.pugx.org/schoppax/sleeper-api-php-lib/downloads)](https://packagist.org/packages/schoppax/sleeper-api-php-lib)
-[![License](https://poser.pugx.org/schoppax/sleeper-api-php-lib/license.png)](https://packagist.org/packages/schoppax/sleeper-api-php-lib)
+[![PHP from Packagist](https://poser.pugx.org/schoppax/php-sleeper-api/require/php)](https://packagist.org/packages/schoppax/php-sleeper-api)
+[![Latest Stable Version](https://poser.pugx.org/schoppax/php-sleeper-api/v/stable)](https://packagist.org/packages/schoppax/php-sleeper-api)
+[![Total Downloads](https://poser.pugx.org/schoppax/php-sleeper-api/downloads)](https://packagist.org/packages/schoppax/php-sleeper-api)
+[![License](https://poser.pugx.org/schoppax/php-sleeper-api/license.png)](https://packagist.org/packages/schoppax/php-sleeper-api)
 
 Sleeper API PHP library for consuming fantasy content from [official read-only Sleeper HTTP API](https://docs.sleeper.app/)
 
@@ -17,13 +17,13 @@ Sleeper API PHP library for consuming fantasy content from [official read-only S
 If you're using Composer to manage dependencies, you can run the following command:
 
 ```sh
-$ composer require schoppax/sleeper-api-php-lib
+$ composer require schoppax/php-sleeper-api
 ```
 
 or add the following to your composer.json file:
 ```json
 "require": {
-  "schoppax/sleeper-api-php-lib": "1.*",
+  "schoppax/php-sleeper-api": "1.*",
 }
 ```
 
