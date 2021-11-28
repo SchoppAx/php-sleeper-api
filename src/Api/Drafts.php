@@ -2,6 +2,8 @@
 
 namespace SchoppAx\Sleeper\Api;
 
+use SchoppAx\Sleeper\Api\Utility\Validation;
+
 class Drafts extends Api
 {
 
@@ -10,11 +12,16 @@ class Drafts extends Api
    * @param string $season
    * @param string[optional] $sport default is nfl
    * @return array
+   * @throws InvalidArgumentException if params doesn't match
    * @throws ClientException if status code <> 200
    * @throws Exception if response body equals null
    */
   public function byUser(string $userId, string $season, string $sport = 'nfl'): array
   {
+    if(!Validation::between($season, 2015, date("Y")) || !Validation::contains(['nfl'], $sport)) {
+      throw new \InvalidArgumentException("byUser function only accepts seasons since 2015 and sport type 'nfl'. Inputs were: {$season}, {$sport}");
+    }
+
     return $this->get('user/' . $userId . '/leagues/'. $sport .'/' . $season);
   }
 

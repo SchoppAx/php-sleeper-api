@@ -80,7 +80,7 @@ class SleeperPlayerTest extends TestCase
     $client = new SleeperClient($mock);
 
     $this->expectException(InvalidArgumentException::class);
-    $this->expectExceptionMessage('trending function only accepts type "add" or "drop". Input was: none');
+    $this->expectExceptionMessage("trending function only accepts type 'add' or 'drop'. Input was: none");
 
     $client->players()->trending('none');
   }
