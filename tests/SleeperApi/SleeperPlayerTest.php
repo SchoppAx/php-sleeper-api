@@ -72,7 +72,7 @@ class SleeperPlayerTest extends TestCase
     $this->assertEquals(15676, $player->count);
   }
 
-  public function testTrendingException()
+  public function testTrendingTypeException()
   {
     $response = new GuzzleHttp\Psr7\Response(200, [], null);
     $mock = new GuzzleHttp\Handler\MockHandler([ $response, $response ]);
@@ -83,6 +83,45 @@ class SleeperPlayerTest extends TestCase
     $this->expectExceptionMessage("trending function only accepts type 'add' or 'drop'. Input was: none");
 
     $client->players()->trending('none');
+  }
+
+  public function testTrendingSportException()
+  {
+    $response = new GuzzleHttp\Psr7\Response(200, [], null);
+    $mock = new GuzzleHttp\Handler\MockHandler([ $response, $response ]);
+
+    $client = new SleeperClient($mock);
+
+    $this->expectException(InvalidArgumentException::class);
+    $this->expectExceptionMessage("trending function only accepts sports like nfl, nba, lcs. Input was: none");
+
+    $client->players()->trending('add', 'none');
+  }
+
+  public function testTrendingHourException()
+  {
+    $response = new GuzzleHttp\Psr7\Response(200, [], null);
+    $mock = new GuzzleHttp\Handler\MockHandler([ $response, $response ]);
+
+    $client = new SleeperClient($mock);
+
+    $this->expectException(InvalidArgumentException::class);
+    $this->expectExceptionMessage("trending function only accepts hours between 1 and 24. Input was: 26");
+
+    $client->players()->trending('add', 'nfl', 26);
+  }
+
+  public function testTrendingLimitException()
+  {
+    $response = new GuzzleHttp\Psr7\Response(200, [], null);
+    $mock = new GuzzleHttp\Handler\MockHandler([ $response, $response ]);
+
+    $client = new SleeperClient($mock);
+
+    $this->expectException(InvalidArgumentException::class);
+    $this->expectExceptionMessage("trending function only accepts limits between 1 and 200. Input was: 0");
+
+    $client->players()->trending('add', 'nfl', 24, 0);
   }
 
 }

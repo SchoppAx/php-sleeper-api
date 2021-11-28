@@ -20,14 +20,14 @@ class Leagues extends Api
 
   /**
    * @param string $userId
-   * @param string $season
+   * @param int $season
    * @param string[optional] $sport default is nfl
    * @return array
    * @throws InvalidArgumentException if params doesn't match
    * @throws ClientException if status code <> 200
    * @throws Exception if response body equals null
    */
-  public function byUser(string $userId, string $season, string $sport = 'nfl'): array
+  public function byUser(string $userId, int $season, string $sport = 'nfl'): array
   {
     if(!Validation::between($season, 2015, date("Y")) || !Validation::contains(['nfl'], $sport)) {
       throw new \InvalidArgumentException("byUser function only accepts seasons since 2015 and sport type 'nfl'. Inputs were: {$season}, {$sport}");
@@ -38,13 +38,13 @@ class Leagues extends Api
 
   /**
    * @param string $leagueId
-   * @param string $week
+   * @param int $week
    * @return array
    * @throws InvalidArgumentException if params doesn't match
    * @throws ClientException if status code <> 200
    * @throws Exception if response body equals null
    */
-  public function matchups(string $leagueId, string $week): array
+  public function matchups(string $leagueId, int $week): array
   {
     if(!Validation::between($week, 1, 16)) {
       throw new \InvalidArgumentException("matchups function only accepts weeks between 1 and 16. Input was: {$week}");

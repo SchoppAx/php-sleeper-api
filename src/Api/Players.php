@@ -23,8 +23,8 @@ class Players extends Api
    *
    * @param string $type
    * @param string $sport
-   * @param string $hours
-   * @param string $limit
+   * @param int $hours
+   * @param int $limit
    *
    * @return array
    * @throws InvalidArgumentException if params doesn't match
