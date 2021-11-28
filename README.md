@@ -1,7 +1,7 @@
 php-sleeper-api
 ===================
 
-[![Build Status](https://www.travis-ci.org/SchoppAx/php-sleeper-api.svg?branch=master)](https://www.travis-ci.org/SchoppAx/php-sleeper-api)
+[![Build Status](https://github.com/schoppax/php-sleeper-api/actions/workflows/php.yml/badge.svg)](https://github.com/schoppax/php-sleeper-api)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/SchoppAx/php-sleeper-api/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/SchoppAx/php-sleeper-api/?branch=master)
 [![Coverage Status](https://coveralls.io/repos/github/SchoppAx/php-sleeper-api/badge.svg?branch=master)](https://coveralls.io/github/SchoppAx/php-sleeper-api?branch=master)
 
