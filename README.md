@@ -75,6 +75,6 @@ try {
 | ------------- | :-----:|
 | Avatars       |   100% |
 | Drafts        |   100% |
-| Leagues       |    78% |
+| Leagues       |   100% |
 | Players       |   100% |
 | Users         |   100% |
