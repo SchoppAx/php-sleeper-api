@@ -29,7 +29,6 @@ class Leagues extends Api
     return $this->get('user/' . $userId . '/leagues/'. $sport .'/' . $season);
   }
 
-
   /**
    * @param string $leagueId
    * @param string $week
@@ -95,6 +94,29 @@ class Leagues extends Api
   public function losersBracket(string $leagueId): array
   {
     return $this->get('league/' . $leagueId . '/losers_bracket');
+  }
+
+  /**
+   * @param string $leagueId
+   * @param int $round
+   * @return array
+   * @throws ClientException if status code <> 200
+   * @throws Exception if response body equals null
+   */
+  public function transactions(string $leagueId, int $round): array
+  {  
+    return $this->get('league/' . $leagueId . '/transactions/' . $round);
+  }
+
+  /**
+   * @param string $leagueId
+   * @return array
+   * @throws ClientException if status code <> 200
+   * @throws Exception if response body equals null
+   */
+  public function tradedPicks(string $leagueId): array
+  {
+    return $this->get('league/' . $leagueId . '/traded_picks/');
   }
 
 }
