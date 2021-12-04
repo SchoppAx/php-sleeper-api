@@ -1,28 +1,29 @@
 {
-    "name": "schoppax/php-sleeper-api",
-    "description": "Sleeper API PHP library for consuming fantasy content",
-    "type": "library",
-    "require": {
-        "php": ">=7.3",
-        "guzzlehttp/guzzle": "^7.0"
-    },
-    "license": "MIT",
-    "autoload": {
-        "psr-4": {
-            "SchoppAx\\Sleeper\\": "src/"
-        }
-    },
-    "authors": [
-        {
-            "name": "Axel Schoppe",
-            "email": "develop4all@gmail.com"
-        }
-    ],
-    "require-dev": {
-        "phpunit/phpunit": "^9.5",
-        "php-coveralls/php-coveralls": "^2.4"
-    },
-    "scripts": {
-      "test": "vendor/bin/phpunit tests"
+  "name": "schoppax/php-sleeper-api",
+  "description": "Sleeper API PHP library for consuming fantasy content",
+  "type": "library",
+  "require": {
+    "php": ">=7.3",
+    "guzzlehttp/guzzle": "^7.0"
+  },
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "SchoppAx\\Sleeper\\": "src/"
     }
+  },
+  "authors": [
+    {
+      "name": "Axel Schoppe",
+      "email": "develop4all@gmail.com"
+    }
+  ],
+  "require-dev": {
+    "symfony/console": "<6.0",
+    "phpunit/phpunit": "^9.5",
+    "php-coveralls/php-coveralls": "^2.4"
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit tests"
+  }
 }
