@@ -245,7 +245,7 @@ class SleeperLeagueTest extends TestCase
     $this->expectException(InvalidArgumentException::class);
     $this->expectExceptionMessage("transactions function only accepts rounds between 1 and 16. Input was: 17");
 
-    $transactions = $client->leagues()->transactions('289646328504385536', 17);
+    $client->leagues()->transactions('289646328504385536', 17);
   }
 
   public function testTradedPicks()
