@@ -4,13 +4,15 @@ namespace SchoppAx\Sleeper\Api;
 
 use SchoppAx\Sleeper\Http\Client;
 
-abstract class Api implements ApiInterface
+abstract class Api
 {
     private $client;
+    protected $sports;
 
     public function __construct(Client $client)
     {
       $this->client = $client;
+      $this->sports = ['nfl', 'nba', 'lcs'];
     }
 
 
@@ -19,7 +21,7 @@ abstract class Api implements ApiInterface
      * @return mixed (json) of called api resource
      * @throws Exception
      */
-    public function get(string $path)
+    protected function get(string $path)
     {
       $response = $this->client->request('GET', $path);
 

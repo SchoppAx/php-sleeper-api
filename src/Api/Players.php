@@ -34,11 +34,10 @@ class Players extends Api
   public function trending(string $type, string $sport = 'nfl', int $hours = 24, int $limit = 25): array
   {
     $type = strtolower($type);
-    $supported = ['nfl', 'nba', 'lcs'];
     if(!Validation::contains(['add', 'drop'], $type)) {
       throw new \InvalidArgumentException("trending function only accepts type 'add' or 'drop'. Input was: {$type}");
-    } elseif(!Validation::contains($supported, $sport)) {
-      $strSupported = join(", ", $supported);
+    } elseif(!Validation::contains($this->sports, $sport)) {
+      $strSupported = join(", ", $this->sports);
       throw new \InvalidArgumentException("trending function only accepts sports like {$strSupported}. Input was: {$sport}");
     } elseif(!Validation::between($hours, 1, 24)) {
       throw new \InvalidArgumentException("trending function only accepts hours between 1 and 24. Input was: {$hours}");

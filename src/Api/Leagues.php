@@ -62,9 +62,8 @@ class Leagues extends Api
    */
   public function state(string $sport = 'nfl'): array
   {
-    $supported = ['nfl', 'nba', 'lcs'];
-    if(!Validation::contains($supported, $sport)) {
-      $strSupported = join(", ", $supported);
+    if(!Validation::contains($this->sports, $sport)) {
+      $strSupported = join(", ", $this->sports);
       throw new \InvalidArgumentException("state function only accepts sports like {$strSupported}. Input was: {$sport}");
     }
 
