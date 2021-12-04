@@ -22,7 +22,7 @@ class Drafts extends Api
       throw new \InvalidArgumentException("byUser function only accepts seasons since 2015 and sport type 'nfl'. Inputs were: {$season}, {$sport}");
     }
 
-    return $this->get('user/' . $userId . '/leagues/'. $sport .'/' . $season);
+    return $this->get('user/' . $userId . '/drafts/'. $sport .'/' . $season);
   }
 
   /**
