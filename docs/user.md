@@ -1,5 +1,12 @@
 # Users
 
+Get user information from sleeper.
+
+## find
+
+- Param: `identifier` Username or user_id.
+- Type: `String`
+
 There are two ways to get user information from sleeper. You can use the *username* or *user_id* of the user.
 Both can be triggerd with the `find`-Method of the `users` class.
 
@@ -13,7 +20,7 @@ You will get a Array response that looks something like this:
 ]
 ```
 
-## Full Example
+### Example
 
 ```php
 $client = new SleeperClient();
