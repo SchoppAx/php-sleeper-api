@@ -2,10 +2,11 @@
 
 Users and leagues have avatar images. There are thumbnail and full-size images for each avatar.
 
-## find
+## find()
 
 - Param: `avatarId`
 - Type: `String`
+
 
 - Param: `thumbnail`
 - Type: `Boolean`
@@ -20,7 +21,7 @@ You will receive a simple url like:
 https://sleepercdn.com/avatars/thumbs/<avatar_id>
 ```
 
-### Example
+**Example**
 
 ```php
 $client = new SleeperClient();

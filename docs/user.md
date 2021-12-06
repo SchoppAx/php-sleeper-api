@@ -2,7 +2,7 @@
 
 Get user information from sleeper.
 
-## find
+## find()
 
 - Param: `identifier` Username or user_id.
 - Type: `String`
@@ -20,15 +20,15 @@ You will get a Array response that looks something like this:
 ]
 ```
 
-### Example
+**Example**
 
 ```php
 $client = new SleeperClient();
 
 $user = $client->users()->find("sleeperuser");
 
-echo $user->["username"];
-echo $user->["user_id"];
-echo $user->["display_name"];
-echo $user->["avatar"];
+echo $user["username"];
+echo $user["user_id"];
+echo $user["display_name"];
+echo $user["avatar"];
 ```
