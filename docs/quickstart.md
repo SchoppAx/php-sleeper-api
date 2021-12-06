@@ -18,22 +18,22 @@ or add the following to your composer.json file:
 
 After that you can just add the namespace and create a new instance of the `SleeperClient` class.
 
-``` php
+```php
 use SchoppAx\Sleeper\SleeperClient;
 
 $client = new SleeperClient();
 ```
 
-Now you are ready ti go.
+Now you are ready to go.
 
 ## Manual initialization
 
-If you don't like `composer` or have trouble installing it?
+You don't like `composer` or have trouble installing it?
 With effort you can manually install the dependencies.
 
 To do so, you can use [PHP download](https://php-download.com/) to get all dependencies. Just type `schoppax/php-sleeper-api` into the search bar and download the library by choosing the download type *require*.
 
-Extract the ZIP file and open the index.php. Add the autoload code to the index.php:
+Extract the ZIP file, open the `index.php` and add the autoload code to the file:
 ```php
 <?php
   require_once('vendor/autoload.php');

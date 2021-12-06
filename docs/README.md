@@ -1,5 +1,4 @@
-#php-sleeper-api
-===================
+php-sleeper-api
 
 ## What it is
 
@@ -7,4 +6,4 @@ This is the documentation of the PHP Sleeper API library for consuming fantasy c
 
 ## Overview
 
-The following docs include all current methods you can use with examples. See the navigation or start with the [Quick start](quickstart.md) for more details.
+The following docs include all current methods you can use to read content from sleeper with examples. See the navigation or start with the [Quick start](quickstart.md) for more details.
